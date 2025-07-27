@@ -1,0 +1,62 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "companyName": "[Company Name]"
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "value": "Value",
+      "contact": "Contact"
+    }
+  },
+  "footer": {
+    "description": "We transform ideas into exceptional digital experiences that drive your business growth.",
+    "servicesTitle": "Services",
+    "webDevelopment": "Web Development",
+    "mobileApps": "Mobile Applications",
+    "digitalConsulting": "Digital Consulting",
+    "contactTitle": "Contact",
+    "copyright": "© 2025 [Company Name]. All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "title": "We Transform Ideas into Digital Reality",
+      "subtitle": "We create extraordinary digital experiences that drive your business growth",
+      "cta": "Start your project"
+    },
+    "services": {
+      "title": "Our Services",
+      "webDev": {
+        "title": "Web Development",
+        "description": "Modern websites and high-performance web applications"
+      },
+      "mobileApps": {
+        "title": "Mobile Apps",
+        "description": "Native and cross-platform applications"
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "Strategy and digital transformation"
+      }
+    },
+    "value": {
+      "title": "Why choose us?",
+      "description": "We combine technical expertise with creativity to deliver solutions that exceed expectations and generate measurable results."
+    },
+    "contact": {
+      "title": "Ready to get started?",
+      "subtitle": "Contact us and let's talk about your next project",
+      "cta": "Contact us"
+    },
+    "hero": {
+      "learnMore": "Learn More",
+      "scrollToExplore": "Scroll to explore"
+    }
+  }
+}

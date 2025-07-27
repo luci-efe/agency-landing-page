@@ -1,0 +1,62 @@
+{
+  "common": {
+    "welcome": "Bienvenido",
+    "home": "Inicio",
+    "about": "Acerca de",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "companyName": "[Nombre de la Empresa]"
+  },
+  "header": {
+    "nav": {
+      "home": "Inicio",
+      "services": "Servicios", 
+      "value": "Valor",
+      "contact": "Contacto"
+    }
+  },
+  "footer": {
+    "description": "Transformamos ideas en experiencias digitales excepcionales que impulsan el crecimiento de tu negocio.",
+    "servicesTitle": "Servicios",
+    "webDevelopment": "Desarrollo Web",
+    "mobileApps": "Aplicaciones Móviles",
+    "digitalConsulting": "Consultoría Digital",
+    "contactTitle": "Contacto",
+    "copyright": "© 2025 [Nombre de la Empresa]. Todos los derechos reservados."
+  },
+  "home": {
+    "hero": {
+      "title": "Transformamos Ideas en Realidad Digital",
+      "subtitle": "Creamos experiencias digitales extraordinarias que impulsan el crecimiento de tu negocio",
+      "cta": "Comienza tu proyecto"
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "webDev": {
+        "title": "Desarrollo Web",
+        "description": "Sitios web modernos y aplicaciones web de alto rendimiento"
+      },
+      "mobileApps": {
+        "title": "Apps Móviles",
+        "description": "Aplicaciones nativas y multiplataforma"
+      },
+      "consulting": {
+        "title": "Consultoría",
+        "description": "Estrategia y transformación digital"
+      }
+    },
+    "value": {
+      "title": "¿Por qué elegirnos?",
+      "description": "Combinamos experiencia técnica con creatividad para entregar soluciones que superan expectativas y generan resultados medibles."
+    },
+    "contact": {
+      "title": "¿Listo para comenzar?",
+      "subtitle": "Contacta con nosotros y hablemos sobre tu próximo proyecto",
+      "cta": "Contáctanos"
+    },
+    "hero": {
+      "learnMore": "Saber Más",
+      "scrollToExplore": "Desliza para explorar"
+    }
+  }
+}
