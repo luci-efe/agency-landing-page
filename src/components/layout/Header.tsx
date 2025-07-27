@@ -17,28 +17,50 @@ export default function Header() {
               </h1>
             </div>
           </div>
-          
+
           <nav className="hidden md:flex space-x-8">
-            <a href="#hero" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <a
+              href="#hero"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               {t('nav.home')}
             </a>
-            <a href="#services" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <a
+              href="#services"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               {t('nav.services')}
             </a>
-            <a href="#value" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <a
+              href="#value"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               {t('nav.value')}
             </a>
-            <a href="#contact" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <a
+              href="#contact"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               {t('nav.contact')}
             </a>
           </nav>
 
           <div className="flex items-center space-x-4">
             <LanguageSwitcher />
-            
+
             <button className="md:hidden">
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>

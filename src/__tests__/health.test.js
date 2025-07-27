@@ -21,7 +21,7 @@ describe('Infrastructure Health Checks', () => {
   describe('Project Configuration', () => {
     test('should have valid package.json structure', () => {
       const packageJson = require('../../package.json');
-      
+
       expect(packageJson.name).toBe('agency-landing-page');
       expect(packageJson.version).toMatch(/^\d+\.\d+\.\d+/);
       expect(packageJson.scripts).toBeDefined();
@@ -32,8 +32,8 @@ describe('Infrastructure Health Checks', () => {
     test('should have required build scripts', () => {
       const packageJson = require('../../package.json');
       const requiredScripts = ['build', 'dev', 'lint', 'typecheck', 'test'];
-      
-      requiredScripts.forEach(script => {
+
+      requiredScripts.forEach((script) => {
         expect(packageJson.scripts[script]).toBeDefined();
       });
     });
@@ -50,7 +50,9 @@ describe('Infrastructure Health Checks', () => {
     test('should have testing dependencies configured', () => {
       const packageJson = require('../../package.json');
       expect(packageJson.devDependencies.jest).toBeDefined();
-      expect(packageJson.devDependencies['@testing-library/react']).toBeDefined();
+      expect(
+        packageJson.devDependencies['@testing-library/react']
+      ).toBeDefined();
       expect(packageJson.devDependencies.cypress).toBeDefined();
     });
   });

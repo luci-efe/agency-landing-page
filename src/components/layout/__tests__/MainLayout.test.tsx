@@ -17,7 +17,7 @@ jest.mock('../Footer', () => {
 describe('MainLayout', () => {
   it('renders children within the layout structure', () => {
     const testContent = 'Test Content';
-    
+
     render(
       <MainLayout>
         <div>{testContent}</div>
@@ -38,7 +38,7 @@ describe('MainLayout', () => {
     expect(screen.getByTestId('header')).toBeInTheDocument();
     expect(screen.getByRole('main')).toBeInTheDocument();
     expect(screen.getByTestId('footer')).toBeInTheDocument();
-    
+
     // Check for main element with flex-1 class
     const mainElement = screen.getByRole('main');
     expect(mainElement).toHaveClass('flex-1');

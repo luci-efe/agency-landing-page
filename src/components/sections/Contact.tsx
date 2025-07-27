@@ -26,7 +26,11 @@ export default function Contact() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="contact" className="py-20 bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-800 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      id="contact"
+      className="py-20 bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-800 relative overflow-hidden"
+    >
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" />
@@ -36,11 +40,14 @@ export default function Contact() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
           {/* Left Column - Header & Info */}
-          <div className={`transition-all duration-1000 ease-out ${
-            isVisible ? 'transform translate-y-0 opacity-100' : 'transform translate-y-8 opacity-0'
-          }`}>
+          <div
+            className={`transition-all duration-1000 ease-out ${
+              isVisible
+                ? 'transform translate-y-0 opacity-100'
+                : 'transform translate-y-8 opacity-0'
+            }`}
+          >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               {t('contact.title')}
             </h2>
@@ -59,7 +66,7 @@ export default function Contact() {
                   <div className="text-indigo-200">hello@agency.com</div>
                 </div>
               </div>
-              
+
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mr-4">
                   <span className="text-xl">📞</span>
@@ -69,7 +76,7 @@ export default function Contact() {
                   <div className="text-indigo-200">+1 (555) 123-4567</div>
                 </div>
               </div>
-              
+
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mr-4">
                   <span className="text-xl">📍</span>
@@ -89,21 +96,30 @@ export default function Contact() {
                   className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-colors duration-300 flex items-center justify-center"
                   aria-label={`Follow us on ${social}`}
                 >
-                  <span className="text-white text-sm font-bold">{social.slice(0, 2)}</span>
+                  <span className="text-white text-sm font-bold">
+                    {social.slice(0, 2)}
+                  </span>
                 </button>
               ))}
             </div>
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className={`transition-all duration-1000 ease-out delay-300 ${
-            isVisible ? 'transform translate-y-0 opacity-100' : 'transform translate-y-8 opacity-0'
-          }`}>
+          <div
+            className={`transition-all duration-1000 ease-out delay-300 ${
+              isVisible
+                ? 'transform translate-y-0 opacity-100'
+                : 'transform translate-y-8 opacity-0'
+            }`}
+          >
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 {/* Name Field */}
                 <div>
-                  <label htmlFor="name" className="block text-white font-medium mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-white font-medium mb-2"
+                  >
                     Full Name *
                   </label>
                   <input
@@ -118,7 +134,10 @@ export default function Contact() {
 
                 {/* Email Field */}
                 <div>
-                  <label htmlFor="email" className="block text-white font-medium mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-white font-medium mb-2"
+                  >
                     Email Address *
                   </label>
                   <input
@@ -133,7 +152,10 @@ export default function Contact() {
 
                 {/* Service Interest */}
                 <div>
-                  <label htmlFor="service" className="block text-white font-medium mb-2">
+                  <label
+                    htmlFor="service"
+                    className="block text-white font-medium mb-2"
+                  >
                     Service Interest
                   </label>
                   <select
@@ -151,7 +173,10 @@ export default function Contact() {
 
                 {/* Message Field */}
                 <div>
-                  <label htmlFor="message" className="block text-white font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-white font-medium mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -175,7 +200,8 @@ export default function Contact() {
                 {/* Form Notice */}
                 <div className="text-center">
                   <p className="text-indigo-200 text-sm">
-                    * This form is for demonstration purposes and is not yet functional
+                    * This form is for demonstration purposes and is not yet
+                    functional
                   </p>
                 </div>
               </form>
@@ -183,9 +209,7 @@ export default function Contact() {
 
             {/* Additional CTA */}
             <div className="mt-8 text-center">
-              <p className="text-indigo-200 mb-4">
-                Prefer a direct approach?
-              </p>
+              <p className="text-indigo-200 mb-4">Prefer a direct approach?</p>
               <button className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white hover:bg-white/20 transition-colors duration-300">
                 <span className="mr-2">📅</span>
                 Schedule a Call

@@ -12,23 +12,26 @@ export default function Hero() {
   }, []);
 
   return (
-    <section 
-      id="hero" 
+    <section
+      id="hero"
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-600 overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-300/10 rounded-full blur-2xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/3 rounded-full blur-3xl animate-spin" style={{ animationDuration: '30s' }} />
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/3 rounded-full blur-3xl animate-spin"
+          style={{ animationDuration: '30s' }}
+        />
       </div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <div 
+        <div
           className={`transition-all duration-1000 ease-out ${
-            isVisible 
-              ? 'transform translate-y-0 opacity-100' 
+            isVisible
+              ? 'transform translate-y-0 opacity-100'
               : 'transform translate-y-8 opacity-0'
           }`}
         >
@@ -43,10 +46,10 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div 
+        <div
           className={`transition-all duration-1000 ease-out delay-300 ${
-            isVisible 
-              ? 'transform translate-y-0 opacity-100' 
+            isVisible
+              ? 'transform translate-y-0 opacity-100'
               : 'transform translate-y-8 opacity-0'
           }`}
         >
@@ -55,10 +58,10 @@ export default function Hero() {
           </p>
         </div>
 
-        <div 
+        <div
           className={`transition-all duration-1000 ease-out delay-500 ${
-            isVisible 
-              ? 'transform translate-y-0 opacity-100' 
+            isVisible
+              ? 'transform translate-y-0 opacity-100'
               : 'transform translate-y-8 opacity-0'
           }`}
         >
@@ -67,7 +70,7 @@ export default function Hero() {
               <span className="relative z-10">{t('hero.cta')}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-white to-indigo-50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
-            
+
             <button className="group border-2 border-white/30 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:border-white hover:bg-white/10 focus:outline-none focus:ring-4 focus:ring-white/30">
               {t('hero.learnMore')}
             </button>
@@ -75,15 +78,17 @@ export default function Hero() {
         </div>
 
         {/* Scroll indicator */}
-        <div 
+        <div
           className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1000 ease-out delay-1000 ${
-            isVisible 
-              ? 'transform translate-y-0 opacity-100' 
+            isVisible
+              ? 'transform translate-y-0 opacity-100'
               : 'transform translate-y-8 opacity-0'
           }`}
         >
           <div className="flex flex-col items-center">
-            <span className="text-white/70 text-sm mb-2">{t('hero.scrollToExplore')}</span>
+            <span className="text-white/70 text-sm mb-2">
+              {t('hero.scrollToExplore')}
+            </span>
             <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
               <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce" />
             </div>
@@ -103,19 +108,19 @@ export default function Hero() {
             transform: translateY(0);
           }
         }
-        
+
         .animate-fade-in-up {
           animation: fade-in-up 0.8s ease-out forwards;
         }
-        
+
         .delay-300 {
           animation-delay: 300ms;
         }
-        
+
         .delay-500 {
           animation-delay: 500ms;
         }
-        
+
         .delay-1000 {
           animation-delay: 1000ms;
         }

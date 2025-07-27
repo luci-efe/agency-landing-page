@@ -9,7 +9,7 @@ interface LocaleLayoutProps {
 
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: LocaleLayoutProps) {
   await params; // Consume params for Next.js routing
   // Providing all messages to the client
@@ -18,9 +18,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <MainLayout>
-        {children}
-      </MainLayout>
+      <MainLayout>{children}</MainLayout>
     </NextIntlClientProvider>
   );
 }

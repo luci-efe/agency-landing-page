@@ -1,9 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #111827;
-  
+
   /* Primary Brand Colors */
   --color-primary-50: #eef2ff;
   --color-primary-100: #e0e7ff;
@@ -16,7 +16,7 @@
   --color-primary-800: #3730a3;
   --color-primary-900: #312e81;
   --color-primary-950: #1e1b4b;
-  
+
   /* Neutral Colors */
   --color-gray-50: #f9fafb;
   --color-gray-100: #f3f4f6;
@@ -35,7 +35,7 @@
   /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   /* Primary Brand Palette */
   --color-primary-50: var(--color-primary-50);
   --color-primary-100: var(--color-primary-100);
@@ -48,7 +48,7 @@
   --color-primary-800: var(--color-primary-800);
   --color-primary-900: var(--color-primary-900);
   --color-primary-950: var(--color-primary-950);
-  
+
   /* Indigo Override for backward compatibility */
   --color-indigo-50: var(--color-primary-50);
   --color-indigo-100: var(--color-primary-100);
@@ -61,7 +61,7 @@
   --color-indigo-800: var(--color-primary-800);
   --color-indigo-900: var(--color-primary-900);
   --color-indigo-950: var(--color-primary-950);
-  
+
   /* Neutral Palette */
   --color-gray-50: var(--color-gray-50);
   --color-gray-100: var(--color-gray-100);
@@ -74,10 +74,12 @@
   --color-gray-800: var(--color-gray-800);
   --color-gray-900: var(--color-gray-900);
   --color-gray-950: var(--color-gray-950);
-  
+
   /* Typography */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  
+  --font-sans:
+    var(--font-inter), ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
   /* Custom Breakpoints */
   --breakpoint-xs: 475px;
   --breakpoint-sm: 640px;
@@ -85,7 +87,7 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
-  
+
   /* Custom Spacing Scale */
   --spacing-18: 4.5rem;
   --spacing-88: 22rem;

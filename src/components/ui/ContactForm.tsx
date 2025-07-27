@@ -24,9 +24,9 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
     name: '',
     email: '',
     service: '',
-    message: ''
+    message: '',
   });
-  
+
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
@@ -55,44 +55,50 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
   };
 
   const handleInputChange = (field: keyof FormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-    
+    setFormData((prev) => ({ ...prev, [field]: value }));
+
     // Clear error when user starts typing
     if (errors[field as keyof FormErrors]) {
-      setErrors(prev => ({ ...prev, [field]: undefined }));
+      setErrors((prev) => ({ ...prev, [field]: undefined }));
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
 
     setIsSubmitting(true);
-    
+
     // Simulate form submission (non-functional for now)
     setTimeout(() => {
       setIsSubmitting(false);
-      alert('Form submitted! (This is just a demo - form is not functional yet)');
+      alert(
+        'Form submitted! (This is just a demo - form is not functional yet)'
+      );
     }, 2000);
   };
 
-  const getFieldClasses = (fieldName: keyof FormErrors, baseClasses: string) => {
+  const getFieldClasses = (
+    fieldName: keyof FormErrors,
+    baseClasses: string
+  ) => {
     const isFocused = focusedField === fieldName;
     const hasError = errors[fieldName];
-    
+
     let classes = baseClasses;
-    
+
     if (hasError) {
       classes += ' border-red-300 focus:border-red-400 focus:ring-red-200';
     } else if (isFocused) {
       classes += ' border-white/40 ring-2 ring-white/20';
     } else {
-      classes += ' border-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/20';
+      classes +=
+        ' border-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/20';
     }
-    
+
     return classes;
   };
 
@@ -100,7 +106,10 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
     <form onSubmit={handleSubmit} className={`space-y-6 ${className}`}>
       {/* Name Field */}
       <div>
-        <label htmlFor="contact-name" className="block text-white font-medium mb-2">
+        <label
+          htmlFor="contact-name"
+          className="block text-white font-medium mb-2"
+        >
           Full Name *
         </label>
         <input
@@ -111,7 +120,8 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           onChange={(e) => handleInputChange('name', e.target.value)}
           onFocus={() => setFocusedField('name')}
           onBlur={() => setFocusedField(null)}
-          className={getFieldClasses('name', 
+          className={getFieldClasses(
+            'name',
             'w-full px-4 py-3 bg-white/10 backdrop-blur-sm rounded-xl text-white placeholder-indigo-200 focus:outline-none transition-all duration-300'
           )}
           placeholder="Enter your full name"
@@ -127,7 +137,10 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
       {/* Email Field */}
       <div>
-        <label htmlFor="contact-email" className="block text-white font-medium mb-2">
+        <label
+          htmlFor="contact-email"
+          className="block text-white font-medium mb-2"
+        >
           Email Address *
         </label>
         <input
@@ -138,7 +151,8 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           onChange={(e) => handleInputChange('email', e.target.value)}
           onFocus={() => setFocusedField('email')}
           onBlur={() => setFocusedField(null)}
-          className={getFieldClasses('email',
+          className={getFieldClasses(
+            'email',
             'w-full px-4 py-3 bg-white/10 backdrop-blur-sm rounded-xl text-white placeholder-indigo-200 focus:outline-none transition-all duration-300'
           )}
           placeholder="your.email@example.com"
@@ -146,7 +160,11 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           aria-invalid={!!errors.email}
         />
         {errors.email && (
-          <p id="email-error" className="mt-2 text-red-300 text-sm" role="alert">
+          <p
+            id="email-error"
+            className="mt-2 text-red-300 text-sm"
+            role="alert"
+          >
             {errors.email}
           </p>
         )}
@@ -154,7 +172,10 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
       {/* Service Interest */}
       <div>
-        <label htmlFor="contact-service" className="block text-white font-medium mb-2">
+        <label
+          htmlFor="contact-service"
+          className="block text-white font-medium mb-2"
+        >
           Service Interest
         </label>
         <select
@@ -174,7 +195,10 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
 
       {/* Message Field */}
       <div>
-        <label htmlFor="contact-message" className="block text-white font-medium mb-2">
+        <label
+          htmlFor="contact-message"
+          className="block text-white font-medium mb-2"
+        >
           Message *
         </label>
         <textarea
@@ -185,7 +209,8 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           onChange={(e) => handleInputChange('message', e.target.value)}
           onFocus={() => setFocusedField('message')}
           onBlur={() => setFocusedField(null)}
-          className={getFieldClasses('message',
+          className={getFieldClasses(
+            'message',
             'w-full px-4 py-3 bg-white/10 backdrop-blur-sm rounded-xl text-white placeholder-indigo-200 focus:outline-none transition-all duration-300 resize-none'
           )}
           placeholder="Tell us about your project..."
@@ -193,7 +218,11 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           aria-invalid={!!errors.message}
         />
         {errors.message && (
-          <p id="message-error" className="mt-2 text-red-300 text-sm" role="alert">
+          <p
+            id="message-error"
+            className="mt-2 text-red-300 text-sm"
+            role="alert"
+          >
             {errors.message}
           </p>
         )}
