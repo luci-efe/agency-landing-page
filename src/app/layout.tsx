@@ -19,8 +19,8 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html>
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html suppressHydrationWarning>
+      <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
         {children}
       </body>
     </html>

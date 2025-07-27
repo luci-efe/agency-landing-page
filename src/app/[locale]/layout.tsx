@@ -14,10 +14,10 @@ export default async function LocaleLayout({
   const { locale } = await params; // Extract locale from params
   // Providing all messages to the client
   // side is the easiest way to get started
-  const messages = await getMessages({ locale });
+  const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       <MainLayout>{children}</MainLayout>
     </NextIntlClientProvider>
   );
